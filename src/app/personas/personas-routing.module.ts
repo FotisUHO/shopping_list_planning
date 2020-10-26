@@ -6,7 +6,18 @@ import { PersonasPage } from './personas.page';
 const routes: Routes = [
   {
     path: '',
-    component: PersonasPage
+    component: PersonasPage,
+    children:
+    [
+      {
+        path: 'miriam',
+        loadChildren: () => import('./miriam/miriam.module').then( m => m.MiriamPageModule)
+      },
+      {
+        path: 'khalid',
+        loadChildren: () => import('./khalid/khalid.module').then( m => m.KhalidPageModule)
+      }
+    ]
   }
 ];
 

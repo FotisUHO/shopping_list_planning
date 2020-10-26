@@ -1,0 +1,26 @@
+html, body, .persona_container {
+  height: 100%;
+}
+
+.persona_container{
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.choice {
+  float: left;
+  color: rgb(95, 138, 106);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 28px;
+  line-height: 25px;
+  border-radius: 4px;
+  style: bold;
+}

@@ -1,5 +1,7 @@
 {
   "name": "shopping-list-planning",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
