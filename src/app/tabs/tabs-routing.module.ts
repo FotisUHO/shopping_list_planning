@@ -8,56 +8,26 @@ const routes: Routes = [
     component: TabsPage,
     children:
     [
-      {
-        path: 'goals',
-        children:
-        [
-            {
-              path: '',
-              loadChildren: '../goals/goals.module#GoalsPageModule'
-            }
-        ]
-      },
-      {
-        path: 'personas',
-        children:
-            [
-              {
-                path: '',
-                loadChildren: '../personas/personas.module#PersonasPageModule'
-              }
-            ]
-      },
-      {
-        path: 'sketches',
-        children:
-            [
-              {
-                path: '',
-                loadChildren: '../sketches/sketches.module#SketchesPageModule'
-              }
-            ]
-      },
-      {
-        path: 'critique',
-        children:
-            [
-              {
-                path: '',
-                loadChildren: '../critique/critique.module#CritiquePageModule'
-              }
-            ]
-      },
-      {
-        path: 'tech',
-        children:
-            [
-              {
-                path: '',
-                loadChildren: '../tech/tech.module#TechPageModule'
-              }
-            ]
-      }
+        {
+            path: 'goals',
+            loadChildren: () => import('../goals/goals.module').then( m => m.GoalsPageModule)
+        },
+        {
+            path: 'personas',
+            loadChildren: () => import('../personas/personas.module').then( m => m.PersonasPageModule)
+        },
+        {
+            path: 'sketches',
+            loadChildren: () => import('../sketches/sketches.module').then( m => m.SketchesPageModule)
+        },
+        {
+            path: 'critique',
+            loadChildren: () => import('../critique/critique.module').then( m => m.CritiquePageModule)
+        },
+        {
+            path: 'tech',
+            loadChildren: () => import('../tech/tech.module').then( m => m.TechPageModule)
+        }
     ]
   }
 ];
